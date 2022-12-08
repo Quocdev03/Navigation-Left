@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    max-width: 1430px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.menu {
+    background-color: #182738;
+    padding: 50px 0 50px 15px;
+    border-radius: 12px;
+    width: 250px;
+}
+
+.menu-item {
+    padding: 15px;
+    border-radius: 12px 0 0 12px;
+    display: block;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-item span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.menu-item.active {
+    background-color: #fff;
+    color: #6a5af9;
+}
+
+.menu-item.active::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #182738;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+    top: 0;
+    right: 0;
+    box-shadow: 10px 10px 0 0 white;
+}
+
+.menu-item.active::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #182738;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(100%);
+    bottom: 0;
+    right: 0;
+    box-shadow: 10px -10px 0 0 white;
+}
